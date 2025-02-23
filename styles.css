@@ -199,7 +199,7 @@ footer {
 @media (max-width: 600px) {
     header nav ul li {
         display: block; /* Stack links on small screens */
-        margin: 10px 0;
+        margin: 10px 5px;
     }
 
     #skills ul li {
