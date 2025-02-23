@@ -189,6 +189,10 @@ footer {
     cursor: pointer;
     display: none; /* Initially hidden */
 }
+#contact ul li a[href*="wa.me"] {
+    color: #25D366; /* WhatsApp green */
+    font-weight: bold;
+}
 
 .back-to-top:hover {
     color: lavender;
