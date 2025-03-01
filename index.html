@@ -3,103 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit's - Portfolio</title>
+    <title>Amit Kumar - Portfolio</title>
     <meta name="description" content="Amit Kumar's Portfolio - A MERN stack developer showcasing skills and projects.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#project">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <h1>Amit Kumar</h1>
-        <h2>Mern Stack Developer</h2>
+        <div class="hero">
+            <h1>Amit Kumar</h1>
+            <h2>MERN Stack Developer</h2>
+        </div>
     </header>
+
     <main>
-        <section id="about">
+        <section id="about" class="about-section"> <!--Added Class -->
             <h2>About Me</h2>
-            <figure>
-                <img src="WhatsApp Image 2025-02-20 at 21.45.45.jpeg" alt="Profile Picture of Amit" width="200" height="300">
-                <figcaption>Amit Kumar</figcaption> 
-            </figure>
-            <p>
-                Hey there! I'm Amit, a passionate MERN Stack Developer who loves building sleek, scalable, and high-performance web applications.
-                 I turn ideas into reality using MongoDB, Express.js, React.js, and Node.js, creating user-friendly experiences with clean and efficient code.
-            </p>
+            <div class="about-content">
+                <figure>
+                    <img src="WhatsApp Image 2025-02-20 at 21.45.45.jpeg" alt="Profile Picture of Amit" width="200" height="300">
+                    <figcaption>Amit Kumar</figcaption>
+                </figure>
+                <p>
+                    Hey there! I'm Amit, a passionate MERN Stack Developer who loves building sleek, scalable, and high-performance web applications.
+                    I turn ideas into reality using MongoDB, Express.js, React.js, and Node.js, creating user-friendly experiences with clean and efficient code.
+                </p>
+            </div>
         </section>
-        <section id="skills">
+
+        <section id="skills" class="skills-section"> <!--Added Class -->
             <h2>Skills</h2>
-            <ul>
-                <li>✅HTML</li>
-                <li>✅CSS</li>
-                <li>✅JavaScript</li>
-                <li>✅DSA</li>
-                <li>✅C++</li>
+            <ul class="skills-list">
+                <li><i class="fa-brands fa-html5"></i> HTML</li>
+                <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                <li><i class="fa-solid fa-code"></i> DSA</li>
+                <li><i class="fa-brands fa-cuttlefish"></i> C++</li>
+                <!-- Add more skills with appropriate icons -->
             </ul>
         </section>
-        <section id="project">
-            <h2>Project</h2>
-            <article>
-                <h3>✨To-Do List App</h3>
-                <figure>
-                    <img src="Screenshot 2025-02-23 at 10.49.05 AM.png" alt="Screenshot of To-Do List" width="300" height="300">
-                </figure>
-                <p>A To-Do List App allows users to add, delete, and mark tasks as completed.</p>
-                <a href="To-do-list/index.html" target="_blank" rel="project">View Project</a>
 
-            </article>
-            <article>
-                <h3>⏱️ Stopwatch & Timer</h3>
-                <figure>
-                    <img src="Screenshot 2025-02-20 at 9.40.15 PM.png" alt="Screenshot of To-Do List" width="300" height="300">
-                </figure>
-                <p>A simple yet powerful To-Do List App built with the MERN stack to help users organize tasks efficiently. This project focuses on smooth UI, real-time updates, and a seamless user experience.</p>
-                <a href="Timer/index.html" target="_blank" rel="project">View Project</a>
+        <section id="projects" class="projects-section"> <!--Added Class -->
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>✨To-Do List App</h3>
+                    <figure>
+                        <img src="" data-src="To-do-list/Screenshot 2025-02-23 at 10.49.05 AM.png" alt="Screenshot of To-Do List" width="300" height="300" loading="lazy">
+                    </figure>
+                    <p>A To-Do List App allows users to add, delete, and mark tasks as completed.</p>
+                    <a href="To-do-list/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
 
-            </article>
-            <article>
-                <h3>Simple Calculator</h3>
-                <figure>
-                    <img src="Screenshot 2025-02-20 at 9.38.13 PM.png" alt="Screenshot of To-Do List" width="300" height="300">
-                </figure>
-                <p>A lightweight and responsive calculator built using HTML, CSS, and JavaScript. This project provides a basic yet stylish interface for performing arithmetic operations efficiently.</p>
-                <a href="calculator/index.html" target="_blank" rel="project">View Project</a>
+                <article class="project-card">
+                    <h3>⏱️ Stopwatch & Timer</h3>
+                    <figure>
+                        <img src="" data-src="Timer/Screenshot 2025-02-20 at 9.40.15 PM.png" alt="Screenshot of Stopwatch & Timer" width="300" height="300" loading="lazy">
+                    </figure>
+                    <p>A simple Stopwatch & Timer application.</p>
+                    <a href="Timer/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
 
-            </article>
-            <article>
-                <h3>🛍️ E-Commerce Website</h3>
-                <figure>
-                    <img src="Screenshot 2025-02-20 at 10.17.14 PM.png" alt="Screenshot of 🛍️ E-Commerce Website" width="500" height="300">
+                <article class="project-card">
+                    <h3>Simple Calculator</h3>
+                    <figure>
+                        <img src="" data-src="calculator/Screenshot 2025-02-20 at 9.38.13 PM.png" alt="Screenshot of Calculator" width="300" height="300" loading="lazy">
+                    </figure>
+                    <p>A lightweight calculator built using HTML, CSS, and JavaScript.</p>
+                    <a href="calculator/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
 
-                </figure>
-                <p>A dynamic and interactive E-Commerce website built using HTML, CSS, and JavaScript, allowing users to browse products, add them to a cart, and manage their shopping experience seamlessly.</p>
-                <a href="e_comm/index.html" target="_blank" rel="project">View Project</a>
-            </article>
+                <article class="project-card">
+                    <h3>🛍️ E-Commerce Website</h3>
+                    <figure>
+                        <img src="" data-src="e_comm/Screenshot 2025-02-20 at 10.17.14 PM.png" alt="Screenshot of E-Commerce Website" width="500" height="300" loading="lazy">
+                    </figure>
+                    <p>A dynamic and interactive E-Commerce website.</p>
+                    <a href="e_comm/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>📚PTU 6th Semester Resources</h3>
+                    <figure>
+                        <img src="" data-src="college_6th/Screenshot 2025-03-01 at 11.53.58 AM.png" alt="Screenshot of To-Do List" width="300" height="300" loading="lazy">
+                    </figure>
+                    <p>PTU Sem6Hub is a simple HTML, CSS, JS website hosting PYQs and notes for 5 subjects</p>
+                    <a href="college_6th/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
+            </div>
         </section>
-        <section id="contact">
+
+        <section id="contact" class="contact-section"> <!--Added Class -->
             <h2>Contact</h2>
-            <p>
-                You can reach me at:
-            </p>
-            <ul>
-                <li>Email: <a href="mailto:amit4321sg@gmail.com">amit4321sg@gmail.com</a></li>
-                <li>LinkedIn:<a href="https://www.linkedin.com/in/amit-cse/" target="_blank" rel="LinkedIn">Amit Kumar</a></li>
-                <li>Insta:<a href="https://www.instagram.com/mr_amit_2003__/?hl=en" target="_blank" rel="instagram">Amit Kumar</a></li>
-                <li>WhatsApp: <a href="https://wa.me/919110904529?text=Hi%20Amit,%20I%20saw%20your%20portfolio!" target="_blank">Chat with me on WhatsApp</a></li>
-                <li>Phone: +91-9110904529</li>
+            <p>You can reach me at:</p>
+            <ul class="contact-list">
+                <li><a href="mailto:amit4321sg@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                <li><a href="https://www.linkedin.com/in/amit-cse/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/mr_amit_2003__/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><i class="fas fa-phone"></i> +91-9110904529</li>
             </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Amit Kumar. All right reserved.</p>
-    </footer>
-    <script src="script.js"></script>
 
-    
+    <footer>
+        <p>© 2024 Amit Kumar. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top">↑</button>
+   <div id="particles-js"></div>
+    <script src="script.js"></script> <!-- Link to JavaScript -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </body>
 </html>
