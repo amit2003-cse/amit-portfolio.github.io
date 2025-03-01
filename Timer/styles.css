@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #121212; /* Dark Background */
+    color: white;
+}
+
+.container {
+    background: #1e1e1e; /* Dark Theme Box */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #ff9800;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    color: #ffffff;
+}
+
+.preset-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.preset {
+    background: #4CAF50;
+    color: white;
+}
+
+.manual-input {
+    margin: 1.5rem 0;
+}
+
+input[type="number"] {
+    padding: 0.8rem;
+    width: 150px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    background: #333;
+    color: white;
+}
+
+#set-manual {
+    background: #2196F3;
+    color: white;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#start-stop {
+    background: #FF5722;
+    color: white;
+}
+
+#reset {
+    background: #9E9E9E;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.running {
+    color: #FF5722 !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#switch-mode {
+    background: #673AB7;
+    color: white;
+    margin-top: 1rem;
+}

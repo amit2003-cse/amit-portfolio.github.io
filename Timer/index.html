@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        <div class="timer-display" id="display">25:00</div>
+
+        <div class="mode-toggle">
+            <button id="switch-mode">Switch to Stopwatch</button>
+        </div>
+
+        <div class="preset-buttons">
+            <button class="preset" data-minutes="25">25 Min</button>
+            <button class="preset" data-minutes="10">10 Min</button>
+            <button class="preset" data-minutes="5">5 Min</button>
+        </div>
+
+        <div class="manual-input">
+            <input type="number" id="minutes" placeholder="Enter minutes" min="1">
+            <button id="set-manual">Set Time</button>
+        </div>
+
+        <div class="control-buttons">
+            <button id="start-stop">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <audio id="alarm" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
