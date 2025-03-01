@@ -1,220 +1,484 @@
-/* General Styling */
+/* --- Custom Properties (CSS Variables) --- */
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #ff6b6b;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #f8f8f8; /* Light gray */
+    --light-gray: #f5f5f5;
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Even more subtle */
+    --transition-duration: 0.3s;
+    --transition-easing: ease-in-out;
+    --border-radius: 10px;
+    --font-family: 'Poppins', sans-serif; /* Use Poppins */
+    --font-family-heading: 'Poppins', sans-serif;
+    --gradient: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    --glass-bg: rgba(255, 255, 255, 0.1);
+
+}
+
+/* --- General Styling --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    background-color:lightgrey; /* Light gray background */
-    color: #333; /* Dark text */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Header Styling */
+/* --- Header Styling --- */
 header {
-    background-color: #2c3e50; /* Dark blue-gray */
+    background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: 2rem 1rem;
     text-align: center;
+    position: relative;
+    overflow: hidden; /* For the gradient animation */
 }
 
-header nav ul {
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--gradient);
+    animation: rotate 20s linear infinite;
+    opacity: 0.1;
+    z-index: 1; /* Behind the content */
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Flexbox on */
-    justify-content: flex-end; /* Right align */
+    display: flex;
+    justify-content: center; /* Center the navigation */
 }
 
-header nav ul li {
-    margin: 0 15px; /* Space between links */
+nav ul li {
+    margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
-    text-decoration: none; /* No underline */
+    text-decoration: none;
+    transition: color var(--transition-duration) var(--transition-easing);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    display: block; /* Make the whole area clickable */
 }
 
-header nav ul li a:hover {
-    text-decoration: underline; /* Hover pe underline */
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+    color: white;
 }
 
-header h1 {
-    margin: 10px 0;
-    font-size: 2rem;
+.hero {
+    margin-top: 2rem;
 }
 
-header h2 {
+.hero h1 {
+    margin: 0.5rem 0;
+    font-size: 3rem;
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+    text-shadow: 2px 2px 4px var(--shadow-color); /* Add a text shadow */
+}
+
+.hero h2 {
     margin: 0;
-    font-size: 1.2rem;
-    color:aqua; /* Light gray subtitle */
+    font-size: 1.75rem;
+    color: #fff;
+    font-family: var(--font-family-heading);
+    font-weight: 500;
 }
 
-/* Main Sections */
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- Main Sections --- */
 main {
-    padding: 20px;
+    padding: 2rem;
 }
 
 section {
-    margin-bottom: 40px; /* Sections ke beech space */
+    margin-bottom: 3rem;
+    opacity: 0; /* Initially hidden for the animation */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s var(--transition-easing), transform 0.5s var(--transition-easing);
+}
+
+section.in-view {
+    opacity: 1; /* Fade in */
+    transform: translateY(0);
 }
 
 section h2 {
-    color: #2c3e50; /* Dark blue-gray */
-    border-bottom: 2px solid #2c3e50; /* Underline effect */
-    padding-bottom: 5px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    font-family: var(--font-family-heading);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center the section heading */
 }
+/* --- About Section --- */
 
-/* About Section */
-#about {
+.about-section {
     text-align: center;
 }
 
-#about figure {
-    margin: 20px 0;
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#about img {
-    border-radius: 20px; /* Rounded corners */
+.about-section figure {
+    margin: 1rem 0;
 }
 
-#about figcaption {
+.about-section img {
+    border-radius: 50%;
+    max-width: 200px;
+    height: auto;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform var(--transition-duration) var(--transition-easing);
+}
+
+.about-section img:hover {
+    transform: scale(1.05);
+}
+
+.about-section figcaption {
     font-style: italic;
-    color: #666; /* Gray caption */
+    color: #777;
+    margin-top: 0.5rem;
 }
 
-#about p {
-    max-width: 600px;
-    margin: 0 auto; /* Center text */
-    line-height: 1.6; /* Readable spacing */
+.about-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 1.1rem;
 }
 
-/* Skills Section */
-#skills ul {
+/* --- Skills Section --- */
+.skills-section {
+    padding: 2rem;
+    text-align: center; /* Center content */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.skills-list {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Wrap on small screens */
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 1.5rem;
 }
 
-#skills ul li {
-    background-color: #3498db; /* Blue background */
-    color: white;
-    padding: 10px 20px;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+.skills-list li {
+    background-color: #fff;
+    color: var(--text-color);
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform var(--transition-duration) var(--transition-easing);
+    display: flex;
+    align-items: center; /* Vertically center icon and text */
+    gap: 0.5rem; /* Space between icon and text */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Add a subtle border */
 }
 
-/* Project Section */
-#project{
+.skills-list li:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Increase shadow */
+}
+/* Style for the icons */
+.skills-list li i {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    color: var(--primary-color); /* Icon color */
+}
+
+/* --- Projects Section --- */
+.projects-section {
+    padding: 2rem;
+}
+
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
-#project article {
+
+.project-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     text-align: center;
-    background-color:whitesmoke;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 1); /* Light shadow */
-}
-#project h2 {
-    grid-column: 1 / -1;
-    border-bottom: 2px solid #2c3e50;
-    padding-bottom: 5px;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-duration) var(--transition-easing);
 }
 
-#project h3 {
-    color: #2980b9; /* Slightly lighter blue */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
     margin-top: 0;
+    font-family: var(--font-family-heading);
+    font-size: 1.4rem;
 }
 
-#project img {
-    max-width: 100%; /* Responsive images */
+.project-card img {
+    max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    transition: opacity 0.3s ease; /* Add a fade-in effect */
+    opacity: 0; /* Initially hidden */
 }
 
-#project p {
+.project-card img[src] {
+    opacity: 1; /* Show image when source is loaded */
+}
+
+.project-card p {
     line-height: 1.5;
 }
 
-#project a {
-    color: #e74c3c; /* Red link */
+.project-card a {
+    color: var(--secondary-color);
     text-decoration: none;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--secondary-color);
+    transition: background-color var(--transition-duration) var(--transition-easing), color var(--transition-duration) var(--transition-easing);
 }
 
-#project a:hover {
-    color: #3498db;
-    text-decoration: underline;
+.project-card a:hover,
+.project-card a:focus {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
 }
 
-/* Contact Section */
-#contact ul {
+/* --- Contact Section --- */
+.contact-section {
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+}
+
+.contact-list {
     list-style: none;
     padding: 0;
+    margin-top: 1rem;
+    display: inline-block; /* Center the list */
+    text-align: left;    /* Align list items to the left */
 }
 
-#contact ul li {
-    margin: 10px 0;
+.contact-list li {
+    margin: 1rem 0;
 }
 
-#contact a {
-    color: #3498db; /* Blue links */
+.contact-list li a {
+    color: var(--secondary-color);
     text-decoration: none;
+    transition: color var(--transition-duration) var(--transition-easing);
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    gap: 0.5rem;
 }
 
-#contact a:hover {
+.contact-list li a:hover,
+.contact-list li a:focus {
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
-/* Footer */
+.contact-list li i {
+    font-size: 1.2rem;
+    width: 1.5rem; /* Ensure consistent icon width */
+    text-align: center; /* Center icons within the width */
+}
+/* --- Footer --- */
 footer {
-    background-color: #2c3e50; /* Same as header */
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem;
 }
+
+/* --- Back to Top Button --- */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #3498db;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
+    padding: 0.75rem 1rem;
+    border-radius: 50%;
     cursor: pointer;
-    display: none; /* Initially hidden */
-}
-#contact ul li a[href*="wa.me"] {
-    color: #25D366; /* WhatsApp green */
-    font-weight: bold;
-}
-
-.back-to-top:hover {
-    color: lavender;
-    background-color:palevioletred;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s var(--transition-easing), transform 0.3s var(--transition-easing);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    z-index: 1000;
 }
 
-/* Responsive Design */
+.back-to-top.show {
+    opacity: 1;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* --- Responsive Design --- */
+
+/* Small screens */
 @media (max-width: 600px) {
-    header nav ul li {
-        display: block; /* Stack links on small screens */
-        margin: 10px 5px;
+    nav ul {
+        flex-direction: column;
+        align-items: center; /* Center the navigation items */
     }
 
-    #skills ul li {
-        width: 100%; /* Full width on small screens */
-        text-align: center;
+    nav ul li {
+        margin: 0.5rem 0;
     }
-    #project{
+
+    .projects-grid {
         grid-template-columns: 1fr;
     }
-
-    #project article {
-        padding: 10px;
+    .about-content {
+        flex-direction: column; /* Stack image and text */
     }
+
+    .about-section figure {
+        margin-bottom: 1rem;
+    }
+}
+/* WhatsApp Button Styles */
+.whatsapp-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.whatsapp-button i {
+    font-size: 28px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Enhanced Back to Top Button */
+.back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Theme Switcher (Optional) */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.dark-theme {
+    --text-color: #fff;
+    --background-color: #1a1a1a;
+    --light-gray: #2d2d2d;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--primary-color);
+    z-index: 9999;
+}
+
+/* Medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Adjustments for medium screens */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+/* Particle Background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
