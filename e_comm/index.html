@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleTech - Premium Electronics</title>
+    <meta name="description" content="Your go-to store for the latest AppleTech products and accessories.">
+    <link rel="stylesheet" href="e_comm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Apple<span>Tech</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="right-nav">
+                <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                    <span class="dark-mode-text">Dark Mode</span>
+                </button>
+                <div class="wishlist-icon" id="wishlist-icon">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </div>
+                <div class="cart-icon" id="cart-icon" aria-label="View Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" id="products">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+            <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="products-grid" id="products-grid">
+            <!-- Product cards will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close Cart">×</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+            <h4>Total: <span id="cart-total">₹0.00</span></h4>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+      <!-- Wishlist Sidebar -->
+      <div class="wishlist-sidebar" id="wishlist-sidebar">
+        <div class="wishlist-header">
+            <h3>Your Wishlist</h3>
+            <button class="close-wishlist" id="close-wishlist" aria-label="Close Wishlist">×</button>
+        </div>
+        <div class="wishlist-items">
+            <!-- Wishlist items will be dynamically added here -->
+        </div>
+    </div>
+    <!-- Contact Bar -->
+    <div class="contact-bar">
+        <a href="https://wa.me/919110904529" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <a href="https://www.linkedin.com/in/amit-cse/" target="_blank" rel="noopener noreferrer" class="linkedin-button">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/mr_amit_2003__/?hl=en" target="_blank" rel="noopener noreferrer" class="instagram-button">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="mailto:amit4321sg@gmail.com" class="email-button">
+            <i class="far fa-envelope"></i> Email
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About AppleTech</h3>
+                <p>Premium electronics store offering the latest tech gadgets and accessories.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>amit4321sg@gmail.com</p>
+                <p>+91-9110904529</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 AppleTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="e_comm.js"></script>
+
+</body>
+</html>
