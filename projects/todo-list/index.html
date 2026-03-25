@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | Amit Kumar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <a href="../../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        <div class="todo-container">
+            <div class="header">
+                <h2>Tasks</h2>
+                <div class="stats"><span id="completedCount">0</span> / <span id="totalCount">0</span> Done</div>
+            </div>
+            
+            <form id="todoForm" class="input-group">
+                <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off" required>
+                <button type="submit" id="addBtn"><i class="fas fa-plus"></i></button>
+            </form>
+
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be injected here -->
+            </ul>
+            
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-clipboard-check"></i>
+                <p>All caught up!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

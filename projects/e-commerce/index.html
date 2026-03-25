@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleTech | Premium Electronics</title>
+    <meta name="description" content="Premium tech storefront experience.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div id="toast-container"></div>
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../../index.html#projects" class="back-link" title="Back to Portfolio">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#" class="logo">Apple<span class="text-accent">Tech</span></a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#hero">Discover</a></li>
+                <li><a href="#products">Mac</a></li>
+                <li><a href="#products">iPad</a></li>
+                <li><a href="#products">iPhone</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="nav-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="nav-btn cart-toggle" id="cart-toggle">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cart-badge">0</span>
+                </div>
+            </div>
+        </nav>
+        <!-- Fullscreen Search Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <button class="close-search" id="close-search"><i class="fas fa-times"></i></button>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search products..." autocomplete="off">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <span class="hero-tag">New Release</span>
+                <h1 class="hero-title">Pro performance.<br>Striking design.</h1>
+                <p class="hero-subtitle">Experience the next generation of premium electronics designed to push boundaries.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#products" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-bg-glow"></div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Products</h2>
+                    <p>The latest and greatest across all categories.</p>
+                </div>
+                
+                <div class="products-grid" id="products-grid">
+                    <!-- Products rendered via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Side Cart -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items rendered via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn btn-primary w-full" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 AppleTech Store. Built by Amit Kumar.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

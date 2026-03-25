@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Stopwatch | Amit Kumar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <a href="../../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        
+        <div class="timer-container">
+            <div class="header">
+                <h1 id="app-title">Countdown Timer</h1>
+                <button id="switch-mode" class="switch-btn" title="Toggle Stopwatch/Timer">
+                    <i class="fas fa-stopwatch"></i>
+                </button>
+            </div>
+
+            <div class="display-wrapper" id="display-wrapper">
+                <div class="glow-ring"></div>
+                <div class="timer-display" id="display">25:00</div>
+            </div>
+
+            <div class="controls-section" id="timer-controls">
+                <div class="preset-buttons">
+                    <button class="preset active" data-minutes="25">25m</button>
+                    <button class="preset" data-minutes="10">10m</button>
+                    <button class="preset" data-minutes="5">5m</button>
+                </div>
+                
+                <div class="manual-input">
+                    <input type="number" id="minutes" placeholder="Custom (m)" min="1" max="999">
+                    <button id="set-manual" class="btn-icon"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="start-stop" class="btn-primary">
+                    <i class="fas fa-play" id="play-icon"></i> <span id="start-text">Start</span>
+                </button>
+                <button id="reset" class="btn-secondary">
+                    <i class="fas fa-rotate-left"></i>
+                </button>
+            </div>
+            
+            <audio id="alarm" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+        </div>
+    </div>
+
+    <!-- Canvas for subtle particles if needed, keeping it simple for now -->
+    <script src="script.js"></script>
+</body>
+</html>

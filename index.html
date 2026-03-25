@@ -3,128 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Kumar - Portfolio</title>
-    <meta name="description" content="Amit Kumar's Portfolio - A MERN stack developer showcasing skills and projects.">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Amit Kumar | MERN Stack Developer</title>
+    <meta name="description" content="Amit Kumar - MERN Stack Developer creating sleek, scalable, and high-performance applications.">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="dark-theme">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Amit<span>.dev</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
-        <div class="hero">
-            <h1>Amit Kumar</h1>
-            <h2>MERN Stack Developer</h2>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="glow-orb"></div>
+        <div class="container hero-content">
+            <span class="badge">Available for Hire</span>
+            <h1 class="hero-title">Crafting <span class="gradient-text">Digital</span> Experiences</h1>
+            <p class="hero-subtitle">
+                Hi, I'm <strong>Amit Kumar</strong>. A passionate MERN Stack Developer transforming ideas into reality with scalable and elegant code.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="about" class="about-section"> <!--Added Class -->
-            <h2>About Me</h2>
-            <div class="about-content">
-                <figure>
-                    <img src="WhatsApp Image 2025-02-20 at 21.45.45.jpeg" alt="Profile Picture of Amit" width="200" height="300">
-                    <figcaption>Amit Kumar</figcaption>
-                </figure>
-                <p>
-                    Hey there! I'm Amit, a passionate MERN Stack Developer who loves building sleek, scalable, and high-performance web applications.
-                    I turn ideas into reality using MongoDB, Express.js, React.js, and Node.js, creating user-friendly experiences with clean and efficient code.
-                </p>
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container about-container reveal">
+            <div class="img-wrapper">
+                <div class="img-glow"></div>
+                <img src="assets/images/profile.jpeg" alt="Amit Kumar" class="profile-img">
             </div>
-        </section>
+            <div class="about-text">
+                <h2 class="section-title">About Me</h2>
+                <div class="divider"></div>
+                <p>Hey there! I'm Amit, a passionate Web Developer who loves building sleek, scalable, and high-performance applications. I specialize in the <strong>MERN stack</strong> (MongoDB, Express.js, React.js, Node.js), turning complex problems into elegant, user-friendly solutions.</p>
+                <p>When I'm not coding, I'm exploring modern design trends and optimizing architectures for performance. My goal is to craft digital experiences that leave a lasting impact.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="skills" class="skills-section"> <!--Added Class -->
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li><i class="fa-brands fa-html5"></i> HTML</li>
-                <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                <li><i class="fa-solid fa-code"></i> DSA</li>
-                <li><i class="fa-brands fa-cuttlefish"></i> C++</li>
-                <!-- Add more skills with appropriate icons -->
-            </ul>
-        </section>
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 class="section-title">Toolkit & Expertise</h2>
+                <p class="section-subtitle">Technologies I use to bring ideas to life.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card hover-glow" style="--glow-color: #f97316;"><i class="fa-brands fa-html5" style="color: #f97316;"></i><span>HTML5</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #3b82f6;"><i class="fa-brands fa-css3-alt" style="color: #3b82f6;"></i><span>CSS3</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #facc15;"><i class="fa-brands fa-js" style="color: #facc15;"></i><span>JavaScript</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #22d3ee;"><i class="fa-brands fa-react" style="color: #22d3ee;"></i><span>React.js</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #22c55e;"><i class="fa-brands fa-node-js" style="color: #22c55e;"></i><span>Node.js</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #16a34a;"><i class="fa-solid fa-leaf" style="color: #16a34a;"></i><span>MongoDB</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #ef4444;"><i class="fa-brands fa-git-alt" style="color: #ef4444;"></i><span>Git & GitHub</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #2563eb;"><i class="fa-solid fa-c" style="color: #2563eb;"></i><span>C++</span></div>
+                <div class="skill-card hover-glow" style="--glow-color: #818cf8;"><i class="fa-solid fa-code" style="color: #818cf8;"></i><span>DSA</span></div>
+            </div>
+        </div>
+    </section>
 
-        <section id="projects" class="projects-section"> <!--Added Class -->
-            <h2>Projects</h2>
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="divider mx-auto"></div>
+                <p class="section-subtitle">A showcase of my recent work, spanning from robust web applications to engaging user interfaces.</p>
+            </div>
+
             <div class="projects-grid">
+                <!-- Project 1 -->
                 <article class="project-card">
-                    <h3>✨To-Do List App</h3>
-                    <figure>
-                        <img src="" data-src="To-do-list/Screenshot 2025-02-23 at 10.49.05 AM.png" alt="Screenshot of To-Do List" width="300" height="300" loading="lazy">
-                    </figure>
-                    <p>A To-Do List App allows users to add, delete, and mark tasks as completed.</p>
-                    <a href="To-do-list/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <div class="card-img-wrapper">
+                        <img src="" data-src="projects/todo-list/todo-screenshot.png" alt="To-Do List App" class="lazy card-img">
+                        <div class="card-overlay">
+                            <a href="projects/todo-list/index.html" target="_blank" class="btn btn-view">View Live</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">✨ To-Do List App</h3>
+                        <p class="card-text">A beautiful task management tool allowing users to seamlessly add, track, and complete their daily goals with interactive UI states.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                        </div>
+                    </div>
                 </article>
 
+                <!-- Project 2 -->
                 <article class="project-card">
-                    <h3>⏱️ Stopwatch & Timer</h3>
-                    <figure>
-                        <img src="" data-src="Timer/Screenshot 2025-02-20 at 9.40.15 PM.png" alt="Screenshot of Stopwatch & Timer" width="300" height="300" loading="lazy">
-                    </figure>
-                    <p>A simple Stopwatch & Timer application.</p>
-                    <a href="Timer/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <div class="card-img-wrapper">
+                        <img src="" data-src="projects/timer/timer-screenshot.png" alt="Timer App" class="lazy card-img">
+                        <div class="card-overlay">
+                            <a href="projects/timer/index.html" target="_blank" class="btn btn-view">View Live</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">⏱️ Premium Timer</h3>
+                        <p class="card-text">An elegant dual-layout stopwatch and timer built with a focus on UI responsiveness and accurate background time tracking.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                        </div>
+                    </div>
                 </article>
 
+                <!-- Project 3 -->
                 <article class="project-card">
-                    <h3>Simple Calculator</h3>
-                    <figure>
-                        <img src="" data-src="calculator/Screenshot 2025-02-20 at 9.38.13 PM.png" alt="Screenshot of Calculator" width="300" height="300" loading="lazy">
-                    </figure>
-                    <p>A lightweight calculator built using HTML, CSS, and JavaScript.</p>
-                    <a href="calculator/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <div class="card-img-wrapper">
+                        <img src="" data-src="projects/calculator/calculator-screenshot.png" alt="Calculator App" class="lazy card-img">
+                        <div class="card-overlay">
+                            <a href="projects/calculator/index.html" target="_blank" class="btn btn-view">View Live</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">📱 Neumorphic Calculator</h3>
+                        <p class="card-text">A visually stunning, lightweight calculator implementing modern neumorphism UI principles and evaluating complex expressions.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                        </div>
+                    </div>
                 </article>
 
+                <!-- Project 4 -->
                 <article class="project-card">
-                    <h3>🛍️ E-Commerce Website</h3>
-                    <figure>
-                        <img src="" data-src="e_comm/Screenshot 2025-02-20 at 10.17.14 PM.png" alt="Screenshot of E-Commerce Website" width="500" height="300" loading="lazy">
-                    </figure>
-                    <p>A dynamic and interactive E-Commerce website.</p>
-                    <a href="e_comm/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <div class="card-img-wrapper">
+                        <img src="" data-src="projects/e-commerce/ecommerce-screenshot.png" alt="E-Commerce App" class="lazy card-img cover-img">
+                        <div class="card-overlay">
+                            <a href="projects/e-commerce/index.html" target="_blank" class="btn btn-view">View Live</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">🛍️ E-Commerce Hub</h3>
+                        <p class="card-text">A dynamic, responsive storefront template demonstrating modern layout patterns, product showcases, and slick interactive elements.</p>
+                        <div class="card-tags">
+                            <span class="tag">Frontend</span><span class="tag">UI Design</span>
+                        </div>
+                    </div>
                 </article>
 
+                <!-- Project 5 -->
                 <article class="project-card">
-                    <h3>📚PTU 6th Semester Resources</h3>
-                    <figure>
-                        <img src="" data-src="college_6th/Screenshot 2025-03-01 at 11.53.58 AM.png" alt="Screenshot of To-Do List" width="300" height="300" loading="lazy">
-                    </figure>
-                    <p>PTU Sem6Hub is a simple HTML, CSS, JS website hosting PYQs and notes for 5 subjects</p>
-                    <a href="college_6th/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <div class="card-img-wrapper">
+                        <img src="" data-src="projects/ptu-notes/ptu-notes-screenshot.png" alt="PTU Sem6Hub App" class="lazy card-img">
+                        <div class="card-overlay">
+                            <a href="projects/ptu-notes/index.html" target="_blank" class="btn btn-view">View Live</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">📚 PTU Sem6Hub</h3>
+                        <p class="card-text">An educational resource platform hosting PYQs and meticulously crafted notes for 6th-semester engineering students.</p>
+                        <div class="card-tags">
+                            <span class="tag">Static Gen</span><span class="tag">Resource</span>
+                        </div>
+                    </div>
                 </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="contact-section"> <!--Added Class -->
-            <h2>Contact</h2>
-            <p>You can reach me at:</p>
-            <ul class="contact-list">
-                <li><a href="mailto:amit4321sg@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-                <li><a href="https://www.linkedin.com/in/amit-cse/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/mr_amit_2003__/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><i class="fas fa-phone"></i> +91-9110904529</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container reveal">
+            <h2 class="section-title text-center">Let's Connect</h2>
+            <p class="section-subtitle text-center mb-10">Currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:amit4321sg@gmail.com" class="contact-pill outline-hover">
+                    <div class="icon-circle text-blue"><i class="fas fa-envelope"></i></div>
+                    <span>Email Me</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/amit-cse/" target="_blank" rel="noopener noreferrer" class="contact-pill outline-hover">
+                    <div class="icon-circle text-linkedin"><i class="fab fa-linkedin"></i></div>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <a href="https://github.com/amit2003-cse" target="_blank" rel="noopener noreferrer" class="contact-pill outline-hover">
+                    <div class="icon-circle text-github"><i class="fab fa-github"></i></div>
+                    <span>GitHub</span>
+                </a>
 
+                <a href="https://www.instagram.com/mr_amit_2003__/?hl=en" target="_blank" rel="noopener noreferrer" class="contact-pill outline-hover">
+                    <div class="icon-circle text-instagram"><i class="fab fa-instagram"></i></div>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Amit Kumar. All rights reserved.</p>
+        <p>© <span id="year">2024</span> Amit Kumar. Built with <i class="fas fa-heart" style="color: #ef4444; margin: 0 4px;"></i> & passion.</p>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to Top">↑</button>
-   <div id="particles-js"></div>
-    <script src="script.js"></script> <!-- Link to JavaScript -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

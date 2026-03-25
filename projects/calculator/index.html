@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Amit Kumar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <a href="../../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        
+        <div class="calculator neumorphic">
+            <div class="display">
+                <div class="previous-operand" id="previous-operand"></div>
+                <div class="current-operand" id="current-operand">0</div>
+            </div>
+            
+            <div class="buttons-grid">
+                <button class="btn fn-btn span-2" data-action="clear">AC</button>
+                <button class="btn fn-btn" data-action="delete">DEL</button>
+                <button class="btn op-btn" data-operator="÷">÷</button>
+                
+                <button class="btn num-btn" data-number="7">7</button>
+                <button class="btn num-btn" data-number="8">8</button>
+                <button class="btn num-btn" data-number="9">9</button>
+                <button class="btn op-btn" data-operator="×">×</button>
+                
+                <button class="btn num-btn" data-number="4">4</button>
+                <button class="btn num-btn" data-number="5">5</button>
+                <button class="btn num-btn" data-number="6">6</button>
+                <button class="btn op-btn" data-operator="-">-</button>
+                
+                <button class="btn num-btn" data-number="1">1</button>
+                <button class="btn num-btn" data-number="2">2</button>
+                <button class="btn num-btn" data-number="3">3</button>
+                <button class="btn op-btn" data-operator="+">+</button>
+                
+                <button class="btn num-btn btn-zero span-2" data-number="0">0</button>
+                <button class="btn num-btn" data-number=".">.</button>
+                <button class="btn equals-btn" data-action="calculate">=</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
